@@ -1,0 +1,5 @@
+export {default as DarkLogo} from './dark_logo'
+export {default as LightLogo} from './light_logo'
+export {default as UzbLogo} from './uzb'
+export {default as RusLogo} from './rus'
+export {default as EngLogo} from './eng'
