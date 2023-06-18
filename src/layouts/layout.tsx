@@ -1,14 +1,22 @@
 import {LayoutProps} from "./layout.props";
-import {Box} from "@chakra-ui/react";
+import {Box, Container} from "@chakra-ui/react";
 import Header from "./headar/header";
-import {FunctionComponent} from "react";
+import {FunctionComponent, useState} from "react";
 import Sidebar from "./sidebar/sidebar";
 
 const Layout = ({children}: LayoutProps):JSX.Element => {
+    const [toggle, setToggle] = useState<boolean>(false)
+
+    const onToggle = () => setToggle(prev => !prev)
+
     return <Box maxWidth={'full'} overflow={'hidden'} >
-        <Header />
-        <Sidebar />
-        <Box>{children}</Box>
+        <Header onToggle={onToggle}/>
+        <Sidebar toggle={toggle}/>
+        <Box mt={'11vh'} pl={{base: 0, lg: '302'}} transition={'all .4s ease '}>
+            <Container maxW={'container.lg'}>
+                {children}
+            </Container>
+        </Box>
     </Box>
 }
 
