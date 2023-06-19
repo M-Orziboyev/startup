@@ -6,7 +6,7 @@ import {SidebarProps} from "./sidebar.props";
 
 const Sidebar = ({toggle}: SidebarProps):JSX.Element => {
     const router = useRouter()
-    return <Box pos={'fixed'} left={{base: toggle ? 0 : '-100%', lg: '0'}} transition={'all .6s ease'} overflowY={"scroll"} css = {{
+    return <Box zIndex={1002} pos={'fixed'} left={{base: toggle ? 0 : '-100%', lg: '0'}} transition={'all .6s ease'} overflowY={"scroll"} css = {{
         '&::-webkit-scrollbar': { width: '3px' },
         '&::-webkit-scrollbar-track': { width: '1px' },
         '&::-webkit-scrollbar-thumb': { background: 'gray' },
