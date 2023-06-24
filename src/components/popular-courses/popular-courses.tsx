@@ -7,10 +7,12 @@ import {CiViewList} from "react-icons/ci";
 import {AiOutlineClockCircle} from "react-icons/ai";
 import {SiGoogleanalytics} from "react-icons/si";
 import {courseCarousel} from "../../config/carousel";
+import {useTranslation} from "react-i18next";
 
 const PopularCourses = () => {
+    const {t} = useTranslation()
     return <>
-        <SectionTitle title={'Explore Featured Courses'} subtitle={'10,000+ unique online course list designs'} />
+        <SectionTitle title={t('popular_courses_title', {ns: 'home'})} subtitle={t('popular_courses_description', {ns: 'home'})} />
         <Carousel responsive={courseCarousel} arrows={true} showDots={false} autoPlaySpeed={5000} autoPlay={true} infinite >
             {data.map(item => (
                 <Stack key={item.title} spacing={3} p={3} cursor={'pointer'}>

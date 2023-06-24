@@ -1,24 +1,17 @@
 import i18n from "i18next";
 import {initReactI18next} from "react-i18next";
-const resources = {
-    en: {
-        translation: {
-            login: "Login"
-        }
-    },
-    uz: {
-        translation: {
-            login: "Kirish"
-        }
-    }
-};
+import detector from 'i18next-browser-languagedetector'
+import backend from 'i18next-http-backend'
 
-i18n.use(initReactI18next).init({
-        resources,
-        lng: "uz",
-        interpolation: {
-            escapeValue: false
-        }
-    });
+
+i18n.use(initReactI18next).use(detector).use(backend).init({
+    ns: ['layout', 'home'],
+    backend: {loadPath: '/locales/{{lng}}/{{ns}}.json'},
+    fallbackLng: "en",
+    interpolation: {
+        escapeValue: false
+    },
+    detection: {order: ['cookie', 'localStorage'], caches: ['cookie']}
+});
 
 export default i18n;

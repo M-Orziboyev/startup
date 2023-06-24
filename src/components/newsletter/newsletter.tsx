@@ -1,16 +1,18 @@
 import {Card, CardBody} from "@chakra-ui/card";
 import {Box, Button, Input, Stack} from "@chakra-ui/react";
 import SectionTitle from "../section-title/section-title";
+import {useTranslation} from "react-i18next";
 
 const Newsletter = () => {
+    const {t} = useTranslation()
     return <>
         <Card mt={10}>
             <CardBody minH={'50vh'} display={'flex'} justifyContent={'center'} alignItems={'center'}>
                 <Stack spacing={3} textAlign={'center'} maxW={'container.sm'}>
-                    <SectionTitle title={'Subscribe our Newsletter &'} subtitle={'Our platform what is education platform give educational video courses every day. Our instructors give technical materials belong to video lessons'} />
+                    <SectionTitle title={t('newsletter_title', {ns: 'home'})} subtitle={t('newsletter_description', {ns: 'home'})} />
                     <Box pos={'relative'}>
-                        <Input h={14} w={'full'} bg={'white'} color={'gray.900'} placeholder={'Your Email'} _placeholder={{color: 'gray.500'}}/>
-                        <Button pos={'absolute'} right={2} top={2} colorScheme={'facebook'} zIndex={999}>Submit</Button>
+                        <Input h={14} w={'full'} bg={'white'} color={'gray.900'} placeholder={t('newsletter_placeholder', {ns:'home'})} _placeholder={{color: 'gray.500'}}/>
+                        <Button pos={'absolute'} right={2} top={2} colorScheme={'facebook'} zIndex={999}>{t('newsletter_submit', {ns: 'home'})}</Button>
                     </Box>
                 </Stack>
             </CardBody>

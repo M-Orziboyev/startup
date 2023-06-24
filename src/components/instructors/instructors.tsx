@@ -3,11 +3,13 @@ import {Box, Flex, Grid, GridItem, Heading, HStack, Icon, Image, Stack, Text} fr
 import {FaUserGraduate} from "react-icons/fa";
 import {AiOutlinePlayCircle} from "react-icons/ai";
 import Link from "next/link";
+import {useTranslation} from "react-i18next";
 
 const Instructors = () => {
+    const {t} = useTranslation()
     return <>
         <Text textAlign={'center'}>
-            <SectionTitle title={'Learn from the best instructors'} subtitle={'All our mentors with high experienced'}/>
+            <SectionTitle title={t('instructor_title', {ns: 'home'})} subtitle={t('instructor_description', {ns: 'home'})}/>
         </Text>
         <Grid gap={3} gridTemplateColumns={{base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', xl: 'repeat(4, 1fr)'}} mt={5}>
             {data.map((item, idx) => (
@@ -34,10 +36,10 @@ const Instructors = () => {
                 </GridItem>
             ))}
         </Grid>
-        <Text textAlign={'center'}>Want to help people learn, grow and achieve more in life? {' '}<Box as={'span'}
+        <Text textAlign={'center'}>{t('instructor_link_title', {ns: 'home'})} {' '}<Box as={'span'}
                                                                                                        color={'teal'}
                                                                                                        _hover={{textDecoration: 'underline'}}><Link
-            href={'/become-instructor'}>Become an instructor</Link></Box></Text>
+            href={'/become-instructor'}>{t('instructor_link_router', {ns : 'home'})}</Link></Box></Text>
     </>
 }
 export default Instructors

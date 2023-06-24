@@ -53,7 +53,7 @@ const Header = ({onToggle}:HeaderProps): JSX.Element => {
                             </MenuList>
                         </Menu>
                         <IconButton aria-label={'color-mode'} onClick={toggleColorMode} icon={colorMode == 'light' ? <BsFillMoonFill/> : <BsFillSunFill />} colorScheme={'facebook'} variant={"outline"}/>
-                        <Button rightIcon={<BiUserCircle />} colorScheme={'facebook'}>{t('login')}</Button>
+                        <Button rightIcon={<BiUserCircle />} colorScheme={'facebook'}>{t('login', {ns: 'layout'})}</Button>
                     </HStack>
                 </Flex>
     </Box>
