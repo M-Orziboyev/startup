@@ -14,7 +14,7 @@ const PopularCourses = () => {
         <Carousel responsive={courseCarousel} arrows={true} showDots={false} autoPlaySpeed={5000} autoPlay={true} infinite >
             {data.map(item => (
                 <Stack key={item.title} spacing={3} p={3} cursor={'pointer'}>
-                    <Image src={item.image} alt={item.title} objectFit={'cover'} h={'210px'} w={'300px'} borderRadius={'lg'} />
+                    <Image src={item.image} alt={item.title} objectFit={'cover'} h={'210px'} w={'full'} borderRadius={'lg'} />
                     <HStack>
                         <Text color={'#e59819'}>{item.reviewAvarage.toFixed(1)}</Text>
                         <ReactStars edit={false}  value={item.reviewAvarage} color2={'#e59819'}/>

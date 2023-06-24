@@ -3,6 +3,7 @@ import {Box, Container} from "@chakra-ui/react";
 import Header from "./headar/header";
 import {FunctionComponent, useState} from "react";
 import Sidebar from "./sidebar/sidebar";
+import Footer from "./footer/footer";
 
 const Layout = ({children}: LayoutProps):JSX.Element => {
     const [toggle, setToggle] = useState<boolean>(false)
@@ -12,11 +13,12 @@ const Layout = ({children}: LayoutProps):JSX.Element => {
     return <Box maxWidth={'full'} overflow={'hidden'} >
         <Header onToggle={onToggle}/>
         <Sidebar toggle={toggle}/>
-        <Box mt={'11vh'} pl={{base: 0, lg: '302'}} transition={'all .4s ease '}>
+        <Box mt={'11vh'} pl={{base: 0, lg: '320px'}} minH={'90vh'} transition={'all .4s ease '}>
             <Container maxW={'container.lg'}>
                 {children}
             </Container>
         </Box>
+        <Footer />
     </Box>
 }
 

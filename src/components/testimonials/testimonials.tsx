@@ -6,7 +6,9 @@ import {ImQuotesRight} from "react-icons/im";
 
 const Testimonials = () => {
     return <>
-        <SectionTitle title={'Testimonials'} subtitle={'10,000+ unique online course list designs'} />
+        <Text textAlign={'center'}>
+            <SectionTitle title={'Testimonials'} subtitle={'10,000+ unique online course list designs'}/>
+        </Text>
         <Carousel responsive={testimonialsCarousel} arrows={true} showDots={false} infinite>
             {data.map((item, idx) => (
                 <Center key={idx} flexDirection={'column'} maxW={'container.sm'} mx={'auto'}>

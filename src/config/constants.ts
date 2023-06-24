@@ -2,7 +2,16 @@ import { AiFillAmazonCircle, AiOutlineDashboard, AiOutlineDollar } from 'react-i
 import { FaApplePay, FaBookReader, FaDraftingCompass, FaQuestionCircle } from 'react-icons/fa';
 import { CiViewList } from 'react-icons/ci';
 import { MdImportContacts, MdOutlineContactMail } from 'react-icons/md';
-import { AnnouncementIcons, CodingIcons, DesignIcons, LaptopIcons, PersonIcons, PrintIcons } from 'src/icons';
+import {
+    AnnouncementIcons,
+    CodingIcons,
+    DesignIcons,
+    EngLogo,
+    LaptopIcons,
+    PersonIcons,
+    PrintIcons,
+    RusLogo, TurkIcon, UzbLogo
+} from 'src/icons';
 import { SiAmd, SiCisco, SiLogitech, SiSpotify } from 'react-icons/si';
 
 export const navigation = [
@@ -92,3 +101,10 @@ export const categories = [
 ];
 
 export const trustedCompeny = [AiFillAmazonCircle, SiAmd, SiCisco, FaApplePay, SiLogitech, SiSpotify];
+
+export const language = [
+    {nativeLng: 'English', lng: 'en', icon: EngLogo},
+    {nativeLng: "O'zbek", lng: 'uz', icon: UzbLogo},
+    {nativeLng: 'Русский', lng: 'ru', icon: RusLogo},
+    {nativeLng: 'Türkçe', lng: 'tr', icon: TurkIcon},
+]
