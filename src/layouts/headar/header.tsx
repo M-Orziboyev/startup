@@ -18,6 +18,7 @@ import {MdOutlineContactSupport} from "react-icons/md";
 import {HeaderProps} from "./header.props";
 import {language} from "../../config/constants";
 import {useTranslation} from "react-i18next";
+import {TbWorld} from "react-icons/tb";
 
 const Header = ({onToggle}:HeaderProps): JSX.Element => {
     const {toggleColorMode, colorMode} = useColorMode()
@@ -38,7 +39,9 @@ const Header = ({onToggle}:HeaderProps): JSX.Element => {
                     <HStack>
                         <IconButton aria-label={'support'}  icon={<MdOutlineContactSupport/>} colorScheme={'facebook'} variant={'ghost'}/>
                         <Menu>
-                            <MenuButton as={IconButton} icon={<BsTranslate />} colorScheme={'facebook'} variant={'solid'}/>
+                            <MenuButton as={Button} rightIcon={<TbWorld />} textTransform={'capitalize'} colorScheme={'facebook'} variant={'solid'}>
+                                {i18n.resolvedLanguage}
+                            </MenuButton>
                             <MenuList p={0}>
                                 {language.map(item => (
                                     <MenuItem
