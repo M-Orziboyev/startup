@@ -5,7 +5,7 @@ import backend from 'i18next-http-backend'
 
 
 i18n.use(initReactI18next).use(detector).use(backend).init({
-    ns: ['layout', 'home'],
+    ns: ['layout', 'home', 'courses'],
     backend: {loadPath: '/locales/{{lng}}/{{ns}}.json'},
     fallbackLng: "en",
     interpolation: {
