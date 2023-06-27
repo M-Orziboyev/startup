@@ -257,7 +257,7 @@ export const booksCategory = [
         id: 'all-categories',
     },
     {
-        label: 'filter_programmin',
+        label: 'filter_programming',
         id: 'programming',
     },
     {
@@ -281,3 +281,4 @@ export const booksCategory = [
         id: 'lifestyle',
     },
 ];
+
