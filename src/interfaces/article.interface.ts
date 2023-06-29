@@ -8,12 +8,14 @@ export interface ArticleType {
     },
     slug: string,
     title: string,
-    authors: AuthorType,
+    author: AuthorType,
     description:{
+        text: string;
         raw: {
             children: [];
         }
-    }
+    },
+    language:string
 }
 export interface AuthorType {
     name: string,
