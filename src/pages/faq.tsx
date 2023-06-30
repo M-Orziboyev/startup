@@ -1,7 +1,8 @@
 import {withLayout} from "../layouts/layout";
+import {FaqPageComponent} from "../page-component";
 
 const Faq = () => {
-    return <div>Faq</div>
+    return <FaqPageComponent />
 }
 
 export default withLayout(Faq)

@@ -1,5 +1,5 @@
 import {withLayout} from "../layouts/layout";
-import PricingPageComponent from "../page-component/pricing-page-component/pricing-page-component";
+import {PricingPageComponent} from "../page-component";
 
 const Pricing = () => {
     return <PricingPageComponent />
