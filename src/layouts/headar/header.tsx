@@ -43,7 +43,7 @@ const Header = ({onToggle}:HeaderProps): JSX.Element => {
                     <HStack>
                         <IconButton aria-label={'support'}  icon={<MdOutlineContactSupport/>} colorScheme={'facebook'} variant={'ghost'}/>
                         <Menu>
-                            <MenuButton as={Button} rightIcon={<TbWorld />} textTransform={'capitalize'} colorScheme={'facebook'} variant={'solid'}>
+                            <MenuButton as={Button} rightIcon={<TbWorld />} textTransform={'capitalize'} colorScheme={'linkedin'} variant={'outline'}>
                                 {i18n.resolvedLanguage}
                             </MenuButton>
                             <MenuList p={0}>
