@@ -2,3 +2,5 @@ export {default as HomePageComponent} from './home-page-component/home-page-comp
 export {default as CoursePageComponent} from './course-page-component/course-page-component'
 export {default as BooksPageComponent} from './books-page-component/books-page-component'
 export {default as ArticlePageComponent} from './article-page-component/article-page-component'
+export {default as ArticleDetailedComponent} from './article-page-component/article-detailed-component'
+export {default as AboutPageComponent} from './about-page-component/about-page-component'

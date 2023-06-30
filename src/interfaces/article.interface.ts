@@ -11,9 +11,7 @@ export interface ArticleType {
     author: AuthorType,
     description:{
         text: string;
-        raw: {
-            children: [];
-        }
+        raw: [];
     },
     language:string
 }

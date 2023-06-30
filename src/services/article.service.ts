@@ -26,6 +26,7 @@ export const Articles = {
 					}
 					description {
 						text
+						raw
 					}
 				}
 			}

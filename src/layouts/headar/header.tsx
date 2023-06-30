@@ -19,13 +19,17 @@ import {HeaderProps} from "./header.props";
 import {language} from "../../config/constants";
 import {useTranslation} from "react-i18next";
 import {TbWorld} from "react-icons/tb";
+import {useRouter} from "next/router";
 
 const Header = ({onToggle}:HeaderProps): JSX.Element => {
     const {toggleColorMode, colorMode} = useColorMode()
+    const router = useRouter()
+
     const { i18n, t } = useTranslation();
 
     const onLanguage = (lng: string) => {
         i18n.changeLanguage(lng);
+        router.replace(router.asPath)
     };
     return <Box zIndex={1002} pos={"fixed"} left={0} right={0} top={0} w={'full'} h={'10vh'} px={10} borderBottom={'1px'} bg={useColorModeValue('gray.50', 'gray.900')}
                 color={useColorModeValue('gray.700', 'gray.200')} borderBottomColor={useColorModeValue("gray.200", "gray.700")}>
