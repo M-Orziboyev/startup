@@ -8,6 +8,10 @@ export {default as Sponsorship} from './sponsorship/sponsorship'
 export {default as Testimonials} from './testimonials/testimonials'
 export {default as AllCoursesCard} from './all-courses-card/all-courses-card'
 export {default as Pricing} from './pricing/pricing'
+export {default as Register} from './register/register'
+export {default as Verification} from './verification/verification'
+export {default as SocialMedia} from './social-media/social-media'
+export {default as Login} from './login/login'
 
 
 
