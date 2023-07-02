@@ -48,10 +48,10 @@ const DetailedCourseComponent = () => {
         const currentCourse = courses.find(c => c.slug === router.query.slug);
         setData(currentCourse);
     }, [router.query]);
-    //
-    // const tabHandler = (idx: number) => {
-    //     setTabIndex(idx);
-    // };
+
+    const tabHandler = (idx: number) => {
+        setTabIndex(idx);
+    };
 
     return (
         <>
@@ -230,8 +230,8 @@ const DetailedCourseComponent = () => {
                 mb={'5vh'}
                 w={{ base: '100%', lg: '60%' }}
                 orientation={'horizontal'}
-                // onChange={tabHandler}
-                // defaultValue={tabIndex}
+                onChange={tabHandler}
+                defaultValue={tabIndex}
                 isFitted
                 colorScheme={'facebook'}
             >
@@ -253,12 +253,12 @@ const DetailedCourseComponent = () => {
                         </Tab>
                     ))}
                 </TabList>
-                {/*<Box w={'full'}>*/}
-                {/*    {tabIndex === 0 && <Overview />}*/}
-                {/*    {tabIndex === 1 && <Curriculum />}*/}
-                {/*    {tabIndex === 2 && <Review />}*/}
-                {/*    {tabIndex === 3 && <Mentor />}*/}
-                {/*</Box>*/}
+                <Box w={'full'}>
+                    {tabIndex === 0 && '<Overview />'}
+                    {tabIndex === 1 && '<Curriculum />'}
+                    {tabIndex === 2 && '<Review />'}
+                    {tabIndex === 3 && '<Mentor />'}
+                </Box>
             </Tabs>
         </>
     );
