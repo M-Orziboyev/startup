@@ -5,20 +5,27 @@ import { CiViewList } from 'react-icons/ci';
 import { SiGoogleanalytics } from 'react-icons/si';
 import ReactStars from 'react-stars';
 import { AllCoursesCardProps } from './all-courses-card.props';
+import Link from "next/link";
+import {useRouter} from "next/router";
 
 const AllCoursesCard = ({ course }: AllCoursesCardProps) => {
+    const router = useRouter()
+
+    const onDetailedCoursePage = () =>  router.push(`/courses/${course.slug}`)
     return (
         <>
             <Box py={4}>
                 <Flex gap={4} direction={{ base: 'column', md: 'row' }}>
-                    <Image
-                        src={course.image}
-                        alt={course.title}
-                        w={{ base: 'full', md: '250px' }}
-                        h={'250px'}
-                        borderRadius={'lg'}
-                        objectFit={'cover'}
-                    />
+                        <Image
+                            src={course.image}
+                            alt={course.title}
+                            w={{ base: 'full', md: '250px' }}
+                            h={'250px'}
+                            borderRadius={'lg'}
+                            objectFit={'cover'}
+                            onClick={onDetailedCoursePage}
+                            cursor={'pointer'}
+                        />
                     <Stack>
                         <HStack>
                             <Text color={'#e59819'}>{course.reviewAvarage.toFixed(1)}</Text>
@@ -62,7 +69,7 @@ const AllCoursesCard = ({ course }: AllCoursesCardProps) => {
                                 <Button rightIcon={<BsMinecartLoaded />} colorScheme={'facebook'}>
                                     Add to cart
                                 </Button>
-                                <Button colorScheme={'facebook'} variant={'outline'}>
+                                <Button onClick={onDetailedCoursePage} colorScheme={'facebook'} variant={'outline'}>
                                     Detail
                                 </Button>
                             </Flex>
