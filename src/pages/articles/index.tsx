@@ -4,9 +4,14 @@ import {Articles} from "../../services/article.service";
 import {ArticleType} from "../../interfaces/article.interface";
 import {Language} from "../../interfaces/constants.interface";
 import {ArticlePageComponent} from "../../page-component";
+import Seo from "../../layouts/seo/seo";
 
 const ArticlePage = ({articles}: ArticlesPageProps) => {
-    return <ArticlePageComponent articles={articles} />
+    return (
+        <Seo metaTitle={'SolveCode | Articles'}>
+            <ArticlePageComponent articles={articles} />
+        </Seo>
+    )
 }
 
 export default withLayout(ArticlePage)

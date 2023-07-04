@@ -8,9 +8,14 @@ import {language} from "../../config/constants";
 import {redirect} from "next/navigation";
 import {defaultStandaloneParam} from "@chakra-ui/toast/dist/create-standalone-toast";
 import {prepareDestination} from "next/dist/shared/lib/router/utils/prepare-destination";
+import Seo from "../../layouts/seo/seo";
 
 const ArticleDetailPage = ({article} : ArticleDetailPageProps) => {
-    return <ArticleDetailedComponent  article={article}/>
+    return (
+        <Seo metaTitle={article.title} metaDescription={article.excerpt}>
+            <ArticleDetailedComponent  article={article}/>
+        </Seo>
+    )
 }
 
 export default withLayout(ArticleDetailPage)
