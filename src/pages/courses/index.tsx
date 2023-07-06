@@ -1,12 +1,25 @@
-import {CoursePageComponent} from "../../page-component";
-import {withLayout} from "../../layouts/layout";
-import Seo from "../../layouts/seo/seo";
+import { useTranslation } from 'react-i18next';
+import { withLayout } from 'src/layouts/layout';
+import Seo from 'src/layouts/seo/seo';
+import CoursesPageComponent from "../../page-component/course-page-component/course-page-component";
 
-const Index = () => {
-    return(
-        <Seo metaTitle={'SolveCode | All courses'} metaDescription={'We can give the best quality courses for you are in need'}>
-            <CoursePageComponent />
+const Courses = () => {
+    const { t } = useTranslation();
+
+    return (
+        <Seo
+            metaTitle={
+                `SolveCode | ${t('course_page_title', { ns: 'seo' })}` ||
+                'SolveCode | All Courses'
+            }
+            metaDescription={
+                `SolveCode | ${t('course_page_description', { ns: 'seo' })}` ||
+                'All courses in SolveCode platform just learn and relax'
+            }
+        >
+            <CoursesPageComponent />
         </Seo>
-    )
-}
-export default withLayout(Index)
+    );
+};
+
+export default withLayout(Courses);

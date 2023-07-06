@@ -1,13 +1,24 @@
-import {withLayout} from "../layouts/layout";
-import {FaqPageComponent} from "../page-component";
-import Seo from "../layouts/seo/seo";
+import { useTranslation } from 'react-i18next';
+import { withLayout } from 'src/layouts/layout';
+import Seo from 'src/layouts/seo/seo';
+import { FaqPageComponent } from 'src/page-component';
 
-const Faq = () => {
+const FaqPage = () => {
+    const { t } = useTranslation();
+
     return (
-        <Seo metaTitle={'SolveCode | FAQ Page'} metaDescription={'The platform users often aks these question and those answers'}>
+        <Seo
+            metaTitle={
+                `SolveCode | ${t('faq_page_title', { ns: 'seo' })}` || 'SolveCode | FAQ'
+            }
+            metaDescription={
+                `SolveCode | ${t('faq_page_description', { ns: 'seo' })}` ||
+                'More users in SolveCode platform frequently asked question'
+            }
+        >
             <FaqPageComponent />
         </Seo>
-    )
-}
+    );
+};
 
-export default withLayout(Faq)
+export default withLayout(FaqPage);

@@ -1,16 +1,16 @@
-import {withLayout} from "../../layouts/layout";
-import {DetailedCourseComponent} from "../../page-component";
-import {useRouter} from "next/router";
-import Seo from "../../layouts/seo/seo";
+import { useRouter } from 'next/router';
+import { withLayout } from 'src/layouts/layout';
+import Seo from 'src/layouts/seo/seo';
+import { DetailedCourseComponent } from 'src/page-component';
 
 const DetailedCoursePage = () => {
-    const router = useRouter()
+    const router = useRouter();
+
     return (
-        <Seo metaTitle={`SolveCode | ${router.query.slug}`}>
-            <DetailedCourseComponent/>
+        <Seo metaTitle={`SolveCode course | ${router.query.slug}`}>
+            <DetailedCourseComponent />
         </Seo>
-    )
+    );
+};
 
-}
-
-export default withLayout(DetailedCoursePage)
+export default withLayout(DetailedCoursePage);

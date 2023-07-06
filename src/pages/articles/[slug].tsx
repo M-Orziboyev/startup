@@ -4,18 +4,14 @@ import {ArticleType} from "../../interfaces/article.interface";
 import {GetServerSideProps} from "next";
 import {ArticleDetailedComponent} from "../../page-component";
 import {Language} from "../../interfaces/constants.interface";
-import {language} from "../../config/constants";
-import {redirect} from "next/navigation";
-import {defaultStandaloneParam} from "@chakra-ui/toast/dist/create-standalone-toast";
-import {prepareDestination} from "next/dist/shared/lib/router/utils/prepare-destination";
 import Seo from "../../layouts/seo/seo";
 
 const ArticleDetailPage = ({article} : ArticleDetailPageProps) => {
     return (
         <Seo metaTitle={article.title} metaDescription={article.excerpt}>
-            <ArticleDetailedComponent  article={article}/>
+            <ArticleDetailedComponent article={article} />
         </Seo>
-    )
+    );
 }
 
 export default withLayout(ArticleDetailPage)

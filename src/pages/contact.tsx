@@ -1,13 +1,25 @@
-import {withLayout} from "../layouts/layout";
-import {ContactPageComponent} from "../page-component";
-import Seo from "../layouts/seo/seo";
+import { useTranslation } from 'react-i18next';
+import { withLayout } from 'src/layouts/layout';
+import Seo from 'src/layouts/seo/seo';
+import { ContactPageComponent } from 'src/page-component';
 
-const Contact = () => {
+const ContactPage = () => {
+    const { t } = useTranslation();
+
     return (
-        <Seo metaTitle={'SolveCode | Contact Page'} metaDescription={'Contact with us'}>
+        <Seo
+            metaTitle={
+                `SolveCode | ${t('contact_page_title', { ns: 'seo' })}` ||
+                'SolveCode | Contact us'
+            }
+            metaDescription={
+                `SolveCode | ${t('contact_page_description', { ns: 'seo' })}` ||
+                'Contact with SolveCode and you can ask any questions'
+            }
+        >
             <ContactPageComponent />
         </Seo>
-    )
-}
+    );
+};
 
-export default withLayout(Contact)
+export default withLayout(ContactPage);

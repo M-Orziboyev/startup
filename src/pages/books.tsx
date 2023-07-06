@@ -1,13 +1,24 @@
-import {withLayout} from "../layouts/layout";
-import {BooksPageComponent} from "../page-component";
-import Seo from "../layouts/seo/seo";
+import { useTranslation } from 'react-i18next';
+import { withLayout } from 'src/layouts/layout';
+import Seo from 'src/layouts/seo/seo';
+import { BooksPageComponent } from 'src/page-component';
 
 const Books = () => {
-    return (
-        <Seo metaTitle={'SolveCode | Books page'} metaDescription={'We can advice GOAT (Great of all time) books collections and give you pdf version'}>
-            <BooksPageComponent/>
-        </Seo>
-    )
-}
+    const { t } = useTranslation();
 
-export default withLayout(Books)
+    return (
+        <Seo
+            metaTitle={
+                `SolveCode | ${t('books_page_title', { ns: 'seo' })}` || 'SolveCode | Books'
+            }
+            metaDescription={
+                `SolveCode | ${t('books_page_description', { ns: 'seo' })}` ||
+                'SolveCode can advice books for you'
+            }
+        >
+            <BooksPageComponent />
+        </Seo>
+    );
+};
+
+export default withLayout(Books);

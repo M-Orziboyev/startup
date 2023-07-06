@@ -1,12 +1,23 @@
-import {AuthPageComponent} from "../page-component";
-import Seo from "../layouts/seo/seo";
+import { useTranslation } from 'react-i18next';
+import Seo from 'src/layouts/seo/seo';
+import { AuthPageComponent } from 'src/page-component';
 
-const Auth = () => {
+const AuthPage = () => {
+    const { t } = useTranslation();
+
     return (
-        <Seo metaTitle={'SolveCode | Auth Page'} metaDescription={'LogIn or Create own account for using this platform'}>
+        <Seo
+            metaTitle={
+                `SolveCode | ${t('auth_page_title', { ns: 'seo' })}` || 'SolveCode | Auth'
+            }
+            metaDescription={
+                `SolveCode | ${t('auth_page_description', { ns: 'seo' })}` ||
+                'Login or create your account for using SolveCode platform'
+            }
+        >
             <AuthPageComponent />
         </Seo>
-    )
-}
+    );
+};
 
-export default Auth
+export default AuthPage;
