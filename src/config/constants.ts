@@ -341,3 +341,10 @@ export const avatars = [
         url: 'https://bit.ly/code-beast',
     },
 ];
+const voiceLanguage = [
+    {
+        language: 'en',
+        codes: 'en-GB',
+        voiceUrl: 'Google UK English Female'
+    },
+];

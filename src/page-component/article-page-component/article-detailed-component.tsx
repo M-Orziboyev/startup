@@ -5,19 +5,27 @@ import {format} from 'date-fns';
 import {useTranslation} from 'react-i18next';
 import {RichText} from "@graphcms/rich-text-react-renderer";
 import {useSpeechSynthesis} from 'react-speech-kit';
+import {useEffect, useState} from "react";
+import {useRouter} from "next/router";
 
 const ArticleDetailedComponent = ({article}: ArticleDetailedProps) => {
     const {t} = useTranslation();
-
+    const {myVoice, setMyVoice} = useState()
     const toast = useToast()
+    const router = useRouter()
     const onEnd = () => {
-        toast({title: 'End of listening', status: 'info', position: 'top-right'})
+        toast({title: 'End of listening', status: 'info', position: 'top-right', isClosable: true})
     }
-    const {speak} = useSpeechSynthesis({onEnd})
+    const {speak, voices} = useSpeechSynthesis({onEnd})
+
+
+    useEffect(() => {
+
+    }, [voices, router])
 
     return (
         <>
-            <Button onClick={() => speak({text: 'hello world'})} variant={"link"}>Tap</Button>
+            <Button onClick={() => speak({text: 'hello world', voices: voices})} variant={"ghost"}>Tap</Button>
             <Card>
                 <CardBody>
                     <Box
