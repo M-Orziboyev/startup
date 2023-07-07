@@ -7,6 +7,8 @@ import {RichText} from "@graphcms/rich-text-react-renderer";
 import {useSpeechSynthesis} from 'react-speech-kit';
 import {useEffect, useState} from "react";
 import {useRouter} from "next/router";
+import Cookies from "js-cookie";
+import {voiceLanguage, voiceLanguages} from "../../config/constants";
 
 const ArticleDetailedComponent = ({article}: ArticleDetailedProps) => {
     const {t} = useTranslation();
@@ -20,12 +22,17 @@ const ArticleDetailedComponent = ({article}: ArticleDetailedProps) => {
 
 
     useEffect(() => {
-
+        const lng = Cookies.get('i18next')
+        const currentLanguage = voiceLanguages.find(item => item.language === lng)
+        const supportLanguage = voiceLanguages.map(c => c.voiceUrl)
+        const allSupportVoices = voices.filter(item => supportLanguage.includes(item.voiceURI))
+        const currentVoice = allSupportVoices.find(item => item.lang === currentLanguage.codes)
+        setMyVoice(currentVoice)
     }, [voices, router])
 
     return (
         <>
-            <Button onClick={() => speak({text: 'hello world', voices: voices})} variant={"ghost"}>Tap</Button>
+            <Button onClick={() => speak({text: 'hello world', voice: myVoice})} variant={"ghost"}>Tap</Button>
             <Card>
                 <CardBody>
                     <Box
