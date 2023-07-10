@@ -101,7 +101,7 @@ export const categories = [
     },
 ];
 
-export const trustedCompeny = [AiFillAmazonCircle, SiAmd, SiCisco, FaApplePay, SiLogitech, SiSpotify];
+export const trustedCompany = [AiFillAmazonCircle, SiAmd, SiCisco, FaApplePay, SiLogitech, SiSpotify];
 
 export const language = [
     {nativeLng: 'English', lng: 'en', icon: EngLogo},
