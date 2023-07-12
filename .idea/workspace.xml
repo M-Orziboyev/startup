@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Connect MongoDB">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="validation">
+      <change afterPath="$PROJECT_DIR$/nestjs/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/auth/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/src/auth/dto/auth.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/auth/dto/auth.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/bcryptjs/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/bcryptjs/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/bcryptjs/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@types/bcryptjs/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,15 +52,21 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/Muzaffar/Dasturlash/startup",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "D:\\Muzaffar\\Dasturlash\\startup\\server\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "D:\\Muzaffar\\Dasturlash\\startup\\client\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactBuddySettings">
+    <option name="extensionsIgnore" value="true" />
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,6 +79,10 @@
       <workItem from="1689073571572" duration="450000" />
       <workItem from="1689074060379" duration="243000" />
       <workItem from="1689084881127" duration="1251000" />
+      <workItem from="1689176414901" duration="723000" />
+      <workItem from="1689177179333" duration="227000" />
+      <workItem from="1689177436871" duration="991000" />
+      <workItem from="1689183673675" duration="2881000" />
     </task>
     <task id="LOCAL-00001" summary="Connect MongoDB">
       <created>1689053304326</created>
@@ -106,6 +129,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Connect MongoDB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connect MongoDB" />
+    <MESSAGE value="validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="validation" />
   </component>
 </project>
