@@ -5,21 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="validation">
-      <change afterPath="$PROJECT_DIR$/nestjs/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nestjs/src/auth/strategies/jwt.strategy.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nestjs/src/config/jwt.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/.env" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nestjs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/auth/auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs/src/auth/dto/auth.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/auth/dto/auth.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/src/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/auth/auth.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/auth/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nestjs/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/bcryptjs/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/bcryptjs/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/bcryptjs/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@types/bcryptjs/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/bin/bcrypt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/dist/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/dist/bcrypt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/dist/bcrypt.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/dist/bcrypt.min.js.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/dist/bcrypt.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/externs/bcrypt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/externs/minimal-env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/scripts/build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/src/bcrypt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/src/bcrypt/impl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/src/bcrypt/prng/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/src/bcrypt/prng/accum.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/src/bcrypt/prng/isaac.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/src/bcrypt/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/src/bcrypt/util/base64.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/src/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/src/wrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/tests/quickbrown.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/bcryptjs/tests/suite.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +58,7 @@
       </GitPushTagMode>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/nestjs" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -50,6 +75,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "D:/Muzaffar/Dasturlash/startup",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -82,7 +108,8 @@
       <workItem from="1689176414901" duration="723000" />
       <workItem from="1689177179333" duration="227000" />
       <workItem from="1689177436871" duration="991000" />
-      <workItem from="1689183673675" duration="2881000" />
+      <workItem from="1689183673675" duration="3387000" />
+      <workItem from="1689224110099" duration="4795000" />
     </task>
     <task id="LOCAL-00001" summary="Connect MongoDB">
       <created>1689053304326</created>
@@ -105,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689074142625</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="validation">
+      <created>1689188680217</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1689188680217</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
