@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="add Readme.md">
-      <change afterPath="$PROJECT_DIR$/nestjs/src/auth/dto/token.dto.ts" afterDir="false" />
+    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Complex Validation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/auth/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/src/course/course.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/course/course.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +80,9 @@
       <workItem from="1689177436871" duration="991000" />
       <workItem from="1689183673675" duration="3387000" />
       <workItem from="1689224110099" duration="6326000" />
-      <workItem from="1689248604479" duration="2995000" />
+      <workItem from="1689248604479" duration="3409000" />
+      <workItem from="1689326394646" duration="722000" />
+      <workItem from="1689329767219" duration="1620000" />
     </task>
     <task id="LOCAL-00001" summary="Connect MongoDB">
       <created>1689053304326</created>
@@ -123,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689230295655</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Complex Validation">
+      <created>1689251804099</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689251804099</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +160,7 @@
     <MESSAGE value="validation" />
     <MESSAGE value="JWT tokens (refresh and access)" />
     <MESSAGE value="add Readme.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Readme.md" />
+    <MESSAGE value="Complex Validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complex Validation" />
   </component>
 </project>
