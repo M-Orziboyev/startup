@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="User controllers">
+    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="User service">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nestjs/src/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/auth/auth.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/src/course/course.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/course/course.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nestjs/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs/src/user/user.controller.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs/src/user/user.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +88,7 @@
       <workItem from="1689329767219" duration="1705000" />
       <workItem from="1689356111159" duration="5127000" />
       <workItem from="1689413363033" duration="3320000" />
-      <workItem from="1689485253670" duration="387000" />
+      <workItem from="1689485253670" duration="6633000" />
     </task>
     <task id="LOCAL-00001" summary="Connect MongoDB">
       <created>1689053304326</created>
@@ -153,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689361322115</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="User service">
+      <created>1689486768831</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1689486768831</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +190,7 @@
     <MESSAGE value="Complex Validation" />
     <MESSAGE value="Get user token" />
     <MESSAGE value="User controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="User controllers" />
+    <MESSAGE value="User service" />
+    <option name="LAST_COMMIT_MESSAGE" value="User service" />
   </component>
 </project>
