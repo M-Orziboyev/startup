@@ -1,7 +1,7 @@
-import axios from "axios";
 import {API_URL, getAuthUrl} from "../../config/api.config";
 import {AuthUserResponse} from "../../store/user/user.interface";
 import {saveStorage} from "../../helpers/auth.helper";
+import axios from "axios"
 
 export const AuthService = {
     async register(email: string, password: string) {

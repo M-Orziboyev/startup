@@ -7,7 +7,7 @@ export const register = createAsyncThunk<AuthUserResponse, InterfaceEmailAndPass
       const response = await AuthService.register(email, password);
       return response.data
    } catch (error){
-       console.log('error')
+       console.log('error get user')
        return thunkApi.rejectWithValue(error)
    }
 })

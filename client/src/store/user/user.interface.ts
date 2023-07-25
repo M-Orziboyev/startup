@@ -15,6 +15,6 @@ export interface AuthUserResponse extends AuthTokens{
 }
 
 export interface InterfaceEmailAndPassword {
-    email: string
     password: string
+    email: string
 }
