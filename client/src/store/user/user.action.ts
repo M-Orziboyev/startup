@@ -2,12 +2,13 @@ import {createAsyncThunk} from "@reduxjs/toolkit";
 import {AuthService} from "../../services/auth/auth.service";
 import {AuthUserResponse, InterfaceEmailAndPassword} from "./user.interface";
 
-export const register = createAsyncThunk<AuthUserResponse, InterfaceEmailAndPassword>('auth/register', async ({email, password}, thunkApi) => {
+export const register = createAsyncThunk<AuthUserResponse, InterfaceEmailAndPassword>('auth/register', async({email, password}, thunkApi) => {
    try {
       const response = await AuthService.register(email, password);
       return response.data
    } catch (error){
-       console.log('error get user')
-       return thunkApi.rejectWithValue(error)
+       console.log(error)
+       // @ts-ignore
+       return thunkApi.rejectWithValue(error.response.data.message)
    }
 })

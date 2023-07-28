@@ -4,7 +4,8 @@ import {register} from "./user.action";
 
 export const initialState: UserInitialStateType = {
     user: null ,
-    isLoading: false
+    isLoading: false,
+    error: null
 }
 
 export const userSlice = createSlice({
@@ -14,16 +15,19 @@ export const userSlice = createSlice({
     extraReducers: builder => {
         builder
             .addCase(register.pending, state => {
-            state.isLoading = true
-        })
-            .addCase(register.fulfilled, (state , {payload})=> {
-            state.isLoading = false
-            state.user = payload.user
-        })
-            .addCase(register.rejected, state => {
-            state.isLoading = false
-            state.user = null
-        })
+                state.isLoading = true;
+                state.error = null;
+            })
+            .addCase(register.fulfilled, (state, { payload }) => {
+                state.isLoading = false;
+                state.user = payload.user;
+                state.error = null;
+            })
+            .addCase(register.rejected, (state, { payload }) => {
+                state.isLoading = false;
+                state.user = null;
+                state.error = payload;
+            })
     },
 })
 

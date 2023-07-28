@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Async Thunk register (bug)" />
+    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Async Thunk register (bug)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/store/root-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/root-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/store/user/user.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/user/user.action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/store/user/user.slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/user/user.slice.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +107,10 @@
       <workItem from="1690125053794" duration="1683000" />
       <workItem from="1690246222686" duration="1027000" />
       <workItem from="1690264420509" duration="1940000" />
-      <workItem from="1690296490125" duration="3444000" />
+      <workItem from="1690296490125" duration="4677000" />
+      <workItem from="1690392716070" duration="6406000" />
+      <workItem from="1690416682316" duration="1914000" />
+      <workItem from="1690455115364" duration="2295000" />
     </task>
     <task id="LOCAL-00001" summary="Connect MongoDB">
       <created>1689053304326</created>
@@ -223,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690299452401</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Async Thunk register (bug)">
+      <created>1690300144068</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1690300144068</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +264,17 @@
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="e031ec94-9c63-49ab-828c-70cef52f06ee">
           <value>
             <State />
           </value>
