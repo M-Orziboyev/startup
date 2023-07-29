@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Async Thunk register (bug)">
+    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Async Thunk register (fixed bug)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/root-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/root-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/login/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/login/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/register/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/register/register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/store/user/user.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/user/user.action.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/store/user/user.slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/user/user.slice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +35,7 @@
     <dismissed value="$PROJECT_DIR$/client/package.json" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2SPfYjrfk4G0yj65PFu0zoUkOuw" />
   <component name="ProjectViewState">
@@ -74,6 +77,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Muzaffar\Dasturlash\startup\client\src\services" />
       <recent name="D:\Muzaffar\Dasturlash\startup" />
     </key>
   </component>
@@ -111,6 +115,8 @@
       <workItem from="1690392716070" duration="6406000" />
       <workItem from="1690416682316" duration="1914000" />
       <workItem from="1690455115364" duration="2295000" />
+      <workItem from="1690544925764" duration="7972000" />
+      <workItem from="1690604463398" duration="3862000" />
     </task>
     <task id="LOCAL-00001" summary="Connect MongoDB">
       <created>1689053304326</created>
@@ -238,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690300144068</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Async Thunk register (fixed bug)">
+      <created>1690552940248</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1690552940248</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +310,7 @@
     <MESSAGE value="Redux toolkit" />
     <MESSAGE value="Async Thunk register" />
     <MESSAGE value="Async Thunk register (bug)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Async Thunk register (bug)" />
+    <MESSAGE value="Async Thunk register (fixed bug)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Async Thunk register (fixed bug)" />
   </component>
 </project>

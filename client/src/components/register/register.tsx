@@ -28,7 +28,7 @@ const Register = ({ onNavigateStateComponent }: RegisterProps) => {
     const { t } = useTranslation();
     const {register} = useActions()
     const onSubmit = () => {
-          register({email: 'tedsst@gmail.com', password: '1234567' })
+          register({email: 'tedsst233@gmail.com', password: '122345667' })
     }
     return (
         <Stack spacing={4}>
