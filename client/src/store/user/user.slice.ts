@@ -1,5 +1,5 @@
-import {UserInitialStateType} from "./user.interface";
-import {createSlice} from "@reduxjs/toolkit";
+import {InterfaceEmailAndPassword, UserInitialStateType} from "./user.interface";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {checkAuth, login, logout, register} from "./user.action";
 
 export const initialState: UserInitialStateType = {
@@ -11,7 +11,11 @@ export const initialState: UserInitialStateType = {
 export const userSlice = createSlice({
     name: 'user',
     initialState,
-    reducers:{},
+    reducers:{
+        clearError: state => {
+            state.error = null;
+        },
+    },
     extraReducers: builder => {
         builder
             .addCase(register.pending, state => {
