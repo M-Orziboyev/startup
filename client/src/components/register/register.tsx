@@ -3,13 +3,9 @@ import {
     Button,
     Checkbox,
     Flex,
-    FormControl,
-    FormLabel,
     Heading,
     HStack,
     Icon,
-    Input,
-    InputGroup,
     InputRightElement,
     Stack,
     Text,
@@ -24,20 +20,20 @@ import {Form, Formik} from "formik";
 import TextFiled from "../text-field/text-filed";
 import {AuthValidation} from "../../validations/auth.validation";
 import {InterfaceEmailAndPassword} from "../../store/user/user.interface";
-import {useState} from "react";
+import {useSelector} from "react-redux";
+import {RootState} from "../../store/store";
+import {ErrorAlert} from "../index";
+import {useTypedSelector} from "../../hooks/useTypedSelector";
 
 const Register = ({onNavigateStateComponent}: RegisterProps) => {
-    const [isLoading, setIsLoading] = useState<boolean>(false);
-    const [error, setError] = useState<string>('')
     const {show, toggleShow, showConfirm, toggleShowConfirm} = useShowPassword();
     const {t} = useTranslation();
-    const {register} = useActions()
+    const {pendingRegister} = useActions();
+    const {error, isLoading} = useTypedSelector(state => state.user)
     const onSubmit = (formData: InterfaceEmailAndPassword) => {
-        setIsLoading(true)
         try {
-            register({ email: formData.email, password: formData.password });
-            setIsLoading(false)
-        }catch (error){
+            pendingRegister({email: formData.email, password: formData.password});
+        } catch (error) {
             console.log(error);
         }
     };
@@ -56,8 +52,12 @@ const Register = ({onNavigateStateComponent}: RegisterProps) => {
             <Text color={'gray.500'} fontSize={{base: 'sm', sm: 'md'}}>
                 {t('register_description', {ns: 'global'})}
             </Text>
-            <Formik initialValues={{email: '', password: '', confirmPassword: ''}} onSubmit={onSubmit} validationSchema={AuthValidation.register}>
+            <Formik initialValues={{email: '', password: '', confirmPassword: ''}} onSubmit={onSubmit}
+                    validationSchema={AuthValidation.register}>
                 <Form>
+                    <>{error && (
+                        <ErrorAlert title={error as string} />
+                    )}</>
                     <TextFiled name='email' type={'text'} label={t('login_input_email_label', {ns: 'global'})}
                                placeholder={'info@sammi.ac'}/>
                     <Flex gap={4}>

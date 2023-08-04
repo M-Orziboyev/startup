@@ -12,6 +12,12 @@ export const userSlice = createSlice({
     name: 'user',
     initialState,
     reducers:{
+        pendingRegister: (state, action: PayloadAction<InterfaceEmailAndPassword>) => {
+          state.user = {
+              email: action.payload.email,
+              password: action.payload.password,
+          }
+        },
         clearError: state => {
             state.error = null;
         },
@@ -57,4 +63,5 @@ export const userSlice = createSlice({
     },
 })
 
-export const {reducer}  = userSlice
+export const userReducer = userSlice.reducer;
+export const userSliceActions = userSlice.actions

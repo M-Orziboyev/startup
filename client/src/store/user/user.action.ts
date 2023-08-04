@@ -1,6 +1,7 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import {AuthService} from "../../services/auth.service";
 import {AuthUserResponse, InterfaceEmailAndPassword} from "./user.interface";
+import {errorCatch} from "../../helpers/api.helper";
 
 export const register = createAsyncThunk<AuthUserResponse, InterfaceEmailAndPassword>('auth/register', async({email, password}, thunkApi) => {
    try {
@@ -8,8 +9,7 @@ export const register = createAsyncThunk<AuthUserResponse, InterfaceEmailAndPass
       return response.data
    } catch (error){
        console.log(error)
-       // @ts-ignore
-       return thunkApi.rejectWithValue(error.response.data.message)
+       return thunkApi.rejectWithValue(errorCatch(error))
    }
 })
 export const login = createAsyncThunk<AuthUserResponse, InterfaceEmailAndPassword>('auth/login', async({email, password}, thunkApi) => {
@@ -18,8 +18,7 @@ export const login = createAsyncThunk<AuthUserResponse, InterfaceEmailAndPasswor
       return response.data
    } catch (error){
        console.log(error)
-       // @ts-ignore
-       return thunkApi.rejectWithValue(error.response.data.message)
+       return thunkApi.rejectWithValue(errorCatch(error))
    }
 })
 
