@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Set up SendGrid">
+    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Email redux action">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/register/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/register/register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/verification/verification.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/verification/verification.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nestjs" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +22,7 @@
         <option name="title" value="All" />
       </GitPushTagMode>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/nestjs" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -54,8 +56,8 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Muzaffar\\Dasturlash\\startup\\server\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Muzaffar\\Dasturlash\\startup\\client\\node_modules\\typescript\\lib&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Muzaffar\\Dasturlash\\startup\\nestjs\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -120,6 +122,11 @@
       <workItem from="1691141616670" duration="5900000" />
       <workItem from="1691232559256" duration="2453000" />
       <workItem from="1691673194369" duration="3068000" />
+      <workItem from="1691744823685" duration="5801000" />
+      <workItem from="1691753495291" duration="19000" />
+      <workItem from="1691761872091" duration="2794000" />
+      <workItem from="1691773917338" duration="824000" />
+      <workItem from="1691774785431" duration="54000" />
     </task>
     <task id="LOCAL-00001" summary="Connect MongoDB">
       <created>1689053304326</created>
@@ -282,7 +289,21 @@
       <option name="project" value="LOCAL" />
       <updated>1691678333667</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="verification OTP">
+      <created>1691745022293</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1691745022293</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Email redux action">
+      <created>1691753416963</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1691753416963</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,6 +367,8 @@
     <MESSAGE value="Validation form" />
     <MESSAGE value="Prepared sign" />
     <MESSAGE value="Set up SendGrid" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up SendGrid" />
+    <MESSAGE value="verification OTP" />
+    <MESSAGE value="Email redux action" />
+    <option name="LAST_COMMIT_MESSAGE" value="Email redux action" />
   </component>
 </project>

@@ -1,19 +1,40 @@
-import {Button, Heading, HStack, PinInput, PinInputField, Stack, Text, useColorModeValue} from '@chakra-ui/react';
+import {
+    Button, Center,
+    Heading,
+    HStack,
+    PinInput,
+    PinInputField,
+    Stack,
+    Text,
+    useColorModeValue,
+    useToast
+} from '@chakra-ui/react';
 import {useTranslation} from 'react-i18next';
 import {Form, Formik} from "formik";
 import {AuthValidation} from "../../validations/auth.validation";
 import {useActions} from "../../hooks/useActions";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {ErrorAlert} from "../index";
+import {useRouter} from "next/router";
 
 const Verification = () => {
     const {t} = useTranslation();
     const {verifyVerificationCode, register} = useActions();
     const {error, isLoading, user} = useTypedSelector(state => state.user)
-    const onSubmit = (formData: { otp: string }) => {
+    const router = useRouter()
+    const toast = useToast()
+    const onSubmit = async (formData: { otp: string }) => {
         const data = {email: user?.email as string, otpVerification: formData.otp}
-        verifyVerificationCode(data)
-        console.log(formData.otp)
+        const verifyResponse: any = await verifyVerificationCode(data)
+        if (verifyResponse.payload === 'Success') {
+            const response: any = await register({email: user?.email as string, password: user?.password as string})
+            const result: any = response
+            console.log(result.payload)
+            if (result.payload.accessToken) {
+                await router.push('/')
+                toast({title: 'Successfully logged in', position: "top-right", isClosable: true})
+            }
+        }
     }
     return (
         <Stack spacing={4}>
@@ -36,15 +57,24 @@ const Verification = () => {
             <Formik onSubmit={onSubmit} initialValues={{otp: ''}} validationSchema={AuthValidation.otp}>
                 {formik => (
                     <Form>
-
-                        <HStack justify={'center'}>
+                        <Center>
                             <PinInput onChange={val => formik.setFieldValue('otp', val)} otp size={'lg'}
-                                      colorScheme={'facebook'} focusBorderColor={'facebook.500'}>
+                                      colorScheme={'facebook'} focusBorderColor={'facebook.500'}
+                            >
                                 {new Array(6).fill(1).map((_, idx) => (
-                                    <PinInputField key={idx}/>
+                                    <PinInputField key={idx} borderColor={
+                                        formik.errors.otp && formik.touched.otp
+                                            ? 'red.500' : 'facebook.500'
+                                    }
+                                    />
                                 ))}
                             </PinInput>
-                        </HStack>
+                        </Center>
+                        {formik.errors.otp && formik.touched.otp && (
+                            <Text textAlign={'center'} mt={2} fontSize='14px' color={'red.500'}>
+                                {formik.errors.otp as string}
+                            </Text>
+                        )}
                         <Button
                             mt={4}
                             w={'full'}

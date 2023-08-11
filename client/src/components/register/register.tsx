@@ -30,11 +30,14 @@ const Register = ({onNavigateStateComponent}: RegisterProps) => {
     const {t} = useTranslation();
     const {pendingRegister, sendVerificationCode} = useActions();
     const {error, isLoading} = useTypedSelector(state => state.user)
-    const onSubmit = (formData: InterfaceEmailAndPassword) => {
+    const onSubmit = async(formData: InterfaceEmailAndPassword) => {
         const {email, password} = formData;
-        sendVerificationCode({email})
-        pendingRegister({email, password});
-        !isLoading && onNavigateStateComponent("verification")
+        const response = await sendVerificationCode({email})
+        const result: any = response
+        if (result.payload === 'Success') {
+            pendingRegister({email, password});
+            onNavigateStateComponent("verification")
+        }
 
     };
     return (
