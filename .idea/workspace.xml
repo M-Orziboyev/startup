@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Set up SendGrid">
-      <change afterPath="$PROJECT_DIR$/nestjs/src/mail/mail.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nestjs/src/mail/mail.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nestjs/src/mail/mail.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs/.env" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +119,7 @@
       <workItem from="1691020829116" duration="6639000" />
       <workItem from="1691141616670" duration="5900000" />
       <workItem from="1691232559256" duration="2453000" />
-      <workItem from="1691673194369" duration="2446000" />
+      <workItem from="1691673194369" duration="3068000" />
     </task>
     <task id="LOCAL-00001" summary="Connect MongoDB">
       <created>1689053304326</created>
@@ -281,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691147563913</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Set up SendGrid">
+      <created>1691678333667</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1691678333667</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
