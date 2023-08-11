@@ -11,11 +11,16 @@ export interface AuthTokens {
     accessToken: string
 }
 
-export interface AuthUserResponse extends AuthTokens{
+export interface AuthUserResponse extends AuthTokens {
     user: UserType
 }
 
 export interface InterfaceEmailAndPassword {
     password: string
     email: string
+}
+
+export interface InterfaceEmailAndOtp {
+    email: string,
+    otpVerification: string
 }

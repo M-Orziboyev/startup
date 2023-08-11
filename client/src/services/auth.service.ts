@@ -1,4 +1,4 @@
-import {API_URL, getAuthUrl} from "../config/api.config";
+import {API_URL, getAuthUrl, getMailUrl} from "../config/api.config";
 import {AuthUserResponse} from "../store/user/user.interface";
 import {removeTokensCookie, saveStorage, saveTokensCookie} from "../helpers/auth.helper";
 import axios from "axios"
@@ -36,16 +36,27 @@ export const AuthService = {
         return response
     },
 
-    logout(){
-      removeTokensCookie()
-      localStorage.removeItem('user')
+    async sendOtp(email: string) {
+        const response = await axios.post<'Success'>(`${API_URL}${getMailUrl('send-otp')}`, {email})
+
+        return response
+    },
+    async verifyOtp(email: string, otpVerification: string) {
+        const response = await axios.post<'Success'>(`${API_URL}${getMailUrl('verify-otp')}`, {email, otpVerification})
+
+        return response
     },
 
-    async getNewToken(){
+    logout() {
+        removeTokensCookie()
+        localStorage.removeItem('user')
+    },
+
+    async getNewToken() {
         const refreshToken = Cookies.get('refreshToken')
         const response = await axios.post(`${API_URL}${getAuthUrl('access')}`, {refreshToken})
 
-        if (response.data.access){
+        if (response.data.access) {
             saveStorage(response.data)
         }
 

@@ -28,14 +28,14 @@ import {useTypedSelector} from "../../hooks/useTypedSelector";
 const Register = ({onNavigateStateComponent}: RegisterProps) => {
     const {show, toggleShow, showConfirm, toggleShowConfirm} = useShowPassword();
     const {t} = useTranslation();
-    const {pendingRegister} = useActions();
+    const {pendingRegister, sendVerificationCode} = useActions();
     const {error, isLoading} = useTypedSelector(state => state.user)
     const onSubmit = (formData: InterfaceEmailAndPassword) => {
-        try {
-            pendingRegister({email: formData.email, password: formData.password});
-        } catch (error) {
-            console.log(error);
-        }
+        const {email, password} = formData;
+        sendVerificationCode({email})
+        pendingRegister({email, password});
+        !isLoading && onNavigateStateComponent("verification")
+
     };
     return (
         <Stack spacing={4}>
@@ -56,7 +56,7 @@ const Register = ({onNavigateStateComponent}: RegisterProps) => {
                     validationSchema={AuthValidation.register}>
                 <Form>
                     <>{error && (
-                        <ErrorAlert title={error as string} />
+                        <ErrorAlert title={error as string}/>
                     )}</>
                     <TextFiled name='email' type={'text'} label={t('login_input_email_label', {ns: 'global'})}
                                placeholder={'info@sammi.ac'}/>

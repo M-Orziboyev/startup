@@ -1,6 +1,6 @@
 import {InterfaceEmailAndPassword, UserInitialStateType} from "./user.interface";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {checkAuth, login, logout, register} from "./user.action";
+import {checkAuth, login, logout, register, sendVerificationCode, verifyVerificationCode} from "./user.action";
 
 export const initialState: UserInitialStateType = {
     user: null ,
@@ -50,6 +50,30 @@ export const userSlice = createSlice({
             .addCase(login.rejected, (state, { payload }) => {
                 state.isLoading = false;
                 state.user = null;
+                state.error = payload;
+            })
+            .addCase(sendVerificationCode.pending, state => {
+                state.isLoading = true
+                state.error = null;
+            })
+            .addCase(sendVerificationCode.fulfilled, state => {
+                state.isLoading = false;
+                state.error = null;
+            })
+            .addCase(sendVerificationCode.rejected, (state, { payload }) => {
+                state.isLoading = false;
+                state.error = payload;
+            })
+            .addCase(verifyVerificationCode.pending, state => {
+                state.isLoading = true
+                state.error = null;
+            })
+            .addCase(verifyVerificationCode.fulfilled, state => {
+                state.isLoading = false;
+                state.error = null;
+            })
+            .addCase(verifyVerificationCode.rejected, (state, { payload }) => {
+                state.isLoading = false;
                 state.error = payload;
             })
             .addCase(logout.fulfilled, (state, { payload }) => {
