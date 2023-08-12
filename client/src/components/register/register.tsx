@@ -32,7 +32,7 @@ const Register = ({onNavigateStateComponent}: RegisterProps) => {
     const {error, isLoading} = useTypedSelector(state => state.user)
     const onSubmit = async(formData: InterfaceEmailAndPassword) => {
         const {email, password} = formData;
-        const response = await sendVerificationCode({email})
+        const response = await sendVerificationCode({email, isUser: false})
         const result: any = response
         if (result.payload === 'Success') {
             pendingRegister({email, password});

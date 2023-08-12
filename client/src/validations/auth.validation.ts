@@ -21,5 +21,10 @@ export const AuthValidation = {
                 .required('OTP verification code is required')
                 .min(6, 'Verification code must be at least 6 digits number')
         })
+    },
+    onlyEmail() {
+        return Yup.object({
+            email: Yup.string().email('Email is invalid').required('Email is required'),
+        })
     }
 }

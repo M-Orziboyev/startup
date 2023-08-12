@@ -36,8 +36,8 @@ export const AuthService = {
         return response
     },
 
-    async sendOtp(email: string) {
-        const response = await axios.post<'Success'>(`${API_URL}${getMailUrl('send-otp')}`, {email})
+    async sendOtp(email: string, isUser: boolean) {
+        const response = await axios.post<'Success'>(`${API_URL}${getMailUrl('send-otp')}`, {email, isUser})
 
         return response
     },

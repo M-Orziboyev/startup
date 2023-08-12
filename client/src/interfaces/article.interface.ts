@@ -1,23 +1,23 @@
-
 export interface ArticleType {
-    createdAt: string,
-    excerpt: string,
-    id: string,
+    createdAt: string;
+    excerpt: string;
+    id: string;
     image: {
-        url: string
-    },
-    slug: string,
-    title: string,
-    author: AuthorType,
-    description:{
+        url: string;
+    };
+    slug: string;
+    title: string;
+    author: AuthorType;
+    language: string;
+    description: {
         text: string;
         raw: [];
-    },
-    language:string
+    };
 }
+
 export interface AuthorType {
-    name: string,
+    name: string;
     avatar: {
-        url: string
-    }
+        url: string;
+    };
 }

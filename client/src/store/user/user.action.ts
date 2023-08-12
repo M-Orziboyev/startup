@@ -28,9 +28,9 @@ export const login = createAsyncThunk<AuthUserResponse, InterfaceEmailAndPasswor
     }
 })
 
-export const sendVerificationCode = createAsyncThunk<'Success', {email: string}>("auth/verification-code", async ({email}, thunkApi) => {
+export const sendVerificationCode = createAsyncThunk<'Success', {email: string, isUser: boolean}>("auth/verification-code", async ({email, isUser}, thunkApi) => {
     try {
-        const response = await AuthService.sendOtp(email)
+        const response = await AuthService.sendOtp(email, isUser);
         return response.data
     }catch (error) {
         return thunkApi.rejectWithValue(errorCatch(error))
