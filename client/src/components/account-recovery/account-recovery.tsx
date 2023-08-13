@@ -1,9 +1,8 @@
 import {
-    Button,
+    Button, Center,
     FormControl,
     FormLabel,
     Heading,
-    HStack,
     Icon,
     Input,
     InputGroup,
@@ -31,15 +30,17 @@ import TextFiled from "../text-field/text-filed";
 const AccountRecovery = ({onNavigateStateComponent}: AccountRecoveryProps) => {
     const [progress, setProgress] = useState<33.33 | 66.66 | 100>(33.33);
     const [step, setStep] = useState<1 | 2 | 3>(1);
+    const [email, setEmail] = useState<string>('');
 
     const {show, toggleShow, showConfirm, toggleShowConfirm} = useShowPassword();
     const toast = useToast();
     const {t} = useTranslation();
-    const {sendVerificationCode} = useActions();
+    const {sendVerificationCode, verifyVerificationCode} = useActions();
     const {error, isLoading} = useTypedSelector(state => state.user)
 
-    const onForm1Submit = (formData: {email: string}) => {
+    const onForm1Submit = (formData: { email: string }) => {
         sendVerificationCode({email: formData.email, isUser: true})
+        setEmail(formData.email)
         setStep(2);
         setProgress(66.66);
     };
@@ -82,9 +83,11 @@ const AccountRecovery = ({onNavigateStateComponent}: AccountRecoveryProps) => {
         </>
     );
 
-    const onForm2Submit = () => {
-        setStep(3);
-        setProgress(100);
+    const onForm2Submit = (formData: { otp: string }) => {
+        const data = {email: email, otpVerification: formData.otp}
+        verifyVerificationCode(data)
+        // setStep(3);
+        // setProgress(100);
     };
 
     const form2 = (
@@ -100,23 +103,46 @@ const AccountRecovery = ({onNavigateStateComponent}: AccountRecoveryProps) => {
                 </Text>
             </Heading>
             <Text>{t('account_recovery_description_form2', {ns: 'global'})}</Text>
-            <HStack justify={'center'}>
-                <PinInput otp size={'lg'} colorScheme={'facebook'} focusBorderColor={'facebook.500'}>
-                    {new Array(6).fill(1).map((_, idx) => (
-                        <PinInputField key={idx}/>
-                    ))}
-                </PinInput>
-            </HStack>
-            <Button
-                w={'full'}
-                bgGradient='linear(to-r, facebook.400,gray.400)'
-                color={'white'}
-                _hover={{bgGradient: 'linear(to-r, facebook.500,gray.500)', boxShadow: 'xl'}}
-                h={14}
-                onClick={onForm2Submit}
-            >
-                {t('account_recovery_btn_form2', {ns: 'global'})}
-            </Button>
+            <>{error && (
+                <ErrorAlert title={error as string}/>
+            )}</>
+            <Formik initialValues={{otp: ''}} onSubmit={onForm2Submit} validationSchema={AuthValidation.otp}>
+                {formik => (
+                    <Form>
+                        <Center>
+                            <PinInput onChange={val => formik.setFieldValue('otp', val)} otp size={'lg'}
+                                      colorScheme={'facebook'} focusBorderColor={'facebook.500'}
+                            >
+                                {new Array(6).fill(1).map((_, idx) => (
+                                    <PinInputField key={idx} borderColor={
+                                        formik.errors.otp && formik.touched.otp
+                                            ? 'red.500' : 'facebook.500'
+                                    }
+                                    />
+                                ))}
+                            </PinInput>
+                        </Center>
+                        <Button
+                            w={'full'}
+                            bgGradient='linear(to-r, facebook.400,gray.400)'
+                            color={'white'}
+                            _hover={{bgGradient: 'linear(to-r, facebook.500,gray.500)', boxShadow: 'xl'}}
+                            h={14}
+                            mt={4}
+                            type={'submit'}
+                            isLoading={isLoading}
+                            loadingText={'Loading...'}
+                        >
+                            {t('account_recovery_btn_form2', {ns: 'global'})}
+                        </Button>
+                        {formik.errors.otp && formik.touched.otp && (
+                            <Text textAlign={'center'} mt={2} fontSize='14px' color={'red.500'}>
+                                {formik.errors.otp as string}
+                            </Text>
+                        )}
+                    </Form>
+                )}
+            </Formik>
         </>
     );
 

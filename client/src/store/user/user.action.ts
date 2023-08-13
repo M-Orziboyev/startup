@@ -1,24 +1,30 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import {AuthService} from "../../services/auth.service";
-import {AuthUserResponse, InterfaceEmailAndOtp, InterfaceEmailAndPassword} from "./user.interface";
+import {AuthUserResponse, InterfaceSign} from "./user.interface";
 import {errorCatch} from "../../helpers/api.helper";
 
-export const register = createAsyncThunk<AuthUserResponse, InterfaceEmailAndPassword>('auth/register', async ({
-                                                                                                                  email,
-                                                                                                                  password
-                                                                                                              }, thunkApi) => {
+export const register = createAsyncThunk<AuthUserResponse, {
+    email: string
+    password: string,
+    callback: () => void
+}>('auth/register', async ({
+                               email,
+                               password,
+                               callback
+                           }, thunkApi) => {
     try {
         const response = await AuthService.register(email, password);
+        callback()
         return response.data
     } catch (error) {
         console.log(error)
         return thunkApi.rejectWithValue(errorCatch(error))
     }
 })
-export const login = createAsyncThunk<AuthUserResponse, InterfaceEmailAndPassword>('auth/login', async ({
-                                                                                                            email,
-                                                                                                            password
-                                                                                                        }, thunkApi) => {
+export const login = createAsyncThunk<AuthUserResponse, InterfaceSign>('auth/login', async ({
+                                                                                                email,
+                                                                                                password
+                                                                                            }, thunkApi) => {
     try {
         const response = await AuthService.login(email, password);
         return response.data
@@ -28,19 +34,28 @@ export const login = createAsyncThunk<AuthUserResponse, InterfaceEmailAndPasswor
     }
 })
 
-export const sendVerificationCode = createAsyncThunk<'Success', {email: string, isUser: boolean}>("auth/verification-code", async ({email, isUser}, thunkApi) => {
+export const sendVerificationCode = createAsyncThunk<'Success', {
+    email: string,
+    isUser: boolean,
+    callback: () => void
+}>("auth/verification-code", async ({email, isUser, callback}, thunkApi) => {
     try {
         const response = await AuthService.sendOtp(email, isUser);
+        callback()
         return response.data
-    }catch (error) {
+    } catch (error) {
         return thunkApi.rejectWithValue(errorCatch(error))
     }
 })
-export const verifyVerificationCode = createAsyncThunk<'Success', InterfaceEmailAndOtp>("auth/verify-code", async ({email, otpVerification}, thunkApi) => {
+export const verifyVerificationCode = createAsyncThunk<'Success', {
+    email: string,
+    otpVerification: string, callback: () => void
+}>("auth/verify-code", async ({email, otpVerification, callback}, thunkApi) => {
     try {
         const response = await AuthService.verifyOtp(email, otpVerification)
+        callback()
         return response.data
-    }catch (error) {
+    } catch (error) {
         return thunkApi.rejectWithValue(errorCatch(error))
     }
 })

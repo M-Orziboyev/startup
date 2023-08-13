@@ -20,7 +20,13 @@ export interface InterfaceEmailAndPassword {
     email: string
 }
 
-export interface InterfaceEmailAndOtp {
-    email: string,
-    otpVerification: string
+// export interface InterfaceEmailAndOtp {
+//     email: string,
+//     otpVerification: string
+// }
+
+export interface InterfaceSign {
+    email: string
+    password: string,
+    callback: () => void
 }
