@@ -21,12 +21,18 @@ export const register = createAsyncThunk<AuthUserResponse, {
         return thunkApi.rejectWithValue(errorCatch(error))
     }
 })
-export const login = createAsyncThunk<AuthUserResponse, InterfaceSign>('auth/login', async ({
-                                                                                                email,
-                                                                                                password
-                                                                                            }, thunkApi) => {
+export const login = createAsyncThunk<AuthUserResponse, {
+    email: string
+    password: string,
+    callback: () => void
+}>('auth/login', async ({
+                            email,
+                            password,
+                            callback
+                        }, thunkApi) => {
     try {
         const response = await AuthService.login(email, password);
+        callback()
         return response.data
     } catch (error) {
         console.log(error)

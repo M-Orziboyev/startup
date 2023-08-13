@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="account recovery">
+    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Register and Verify">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/account-recovery/account-recovery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/account-recovery/account-recovery.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/register/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/register/register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/verification/verification.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/verification/verification.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/login/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/login/login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/store/user/user.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/user/user.action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store/user/user.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/user/user.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs/src/mail/mail.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/mail/mail.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +130,8 @@
       <workItem from="1691774877417" duration="2301000" />
       <workItem from="1691815623950" duration="5862000" />
       <workItem from="1691861345271" duration="3056000" />
-      <workItem from="1691900045160" duration="4494000" />
+      <workItem from="1691900045160" duration="4620000" />
+      <workItem from="1691939530845" duration="2165000" />
     </task>
     <task id="LOCAL-00001" summary="Connect MongoDB">
       <created>1689053304326</created>
@@ -325,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691864218992</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Register and Verify">
+      <created>1691904660205</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1691904660205</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,6 +397,7 @@
     <MESSAGE value="Email redux action" />
     <MESSAGE value="Verify Email and Register" />
     <MESSAGE value="account recovery" />
-    <option name="LAST_COMMIT_MESSAGE" value="account recovery" />
+    <MESSAGE value="Register and Verify" />
+    <option name="LAST_COMMIT_MESSAGE" value="Register and Verify" />
   </component>
 </project>
