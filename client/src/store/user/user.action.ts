@@ -65,6 +65,18 @@ export const verifyVerificationCode = createAsyncThunk<'Success', {
         return thunkApi.rejectWithValue(errorCatch(error))
     }
 })
+export const editProfilePassword = createAsyncThunk<'Success', {
+    email: string,
+    password: string, callback: () => void
+}>("auth/edit-profile", async ({email, password, callback}, thunkApi) => {
+    try {
+        const response = await AuthService.editProfilePassword(email, password)
+        callback()
+        return response.data
+    } catch (error) {
+        return thunkApi.rejectWithValue(errorCatch(error))
+    }
+})
 
 export const logout = createAsyncThunk('auth/logout', () => {
     AuthService.logout()

@@ -1,8 +1,9 @@
-import {API_URL, getAuthUrl, getMailUrl} from "../config/api.config";
+import {API_URL, getAuthUrl, getMailUrl, getUserUrl} from "../config/api.config";
 import {AuthUserResponse} from "../store/user/user.interface";
 import {removeTokensCookie, saveStorage, saveTokensCookie} from "../helpers/auth.helper";
 import axios from "axios"
 import Cookies from "js-cookie";
+import {editProfilePassword} from "../store/user/user.action";
 
 export const AuthService = {
     async register(email: string, password: string) {
@@ -43,6 +44,11 @@ export const AuthService = {
     },
     async verifyOtp(email: string, otpVerification: string) {
         const response = await axios.post<'Success'>(`${API_URL}${getMailUrl('verify-otp')}`, {email, otpVerification})
+
+        return response
+    },
+    async editProfilePassword(email: string, password: string) {
+        const response = await axios.put<'Success'>(`${API_URL}${getUserUrl('edit-password')}`, {email, password})
 
         return response
     },

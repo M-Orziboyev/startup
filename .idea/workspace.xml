@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Register and Verify">
+    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Action callback">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/account-recovery/account-recovery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/account-recovery/account-recovery.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/login/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/login/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/config/api.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/config/api.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/store/user/user.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store/user/user.action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/validations/auth.validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/validations/auth.validation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/src/mail/mail.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/mail/mail.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/src/user/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/user/user.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/src/user/user.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/user/user.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/src/user/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/user/user.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +137,8 @@
       <workItem from="1691815623950" duration="5862000" />
       <workItem from="1691861345271" duration="3056000" />
       <workItem from="1691900045160" duration="4620000" />
-      <workItem from="1691939530845" duration="2165000" />
+      <workItem from="1691939530845" duration="2463000" />
+      <workItem from="1692011060370" duration="3623000" />
     </task>
     <task id="LOCAL-00001" summary="Connect MongoDB">
       <created>1689053304326</created>
@@ -329,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691904660205</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Action callback">
+      <created>1691942399486</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1691942399486</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,6 +412,7 @@
     <MESSAGE value="Verify Email and Register" />
     <MESSAGE value="account recovery" />
     <MESSAGE value="Register and Verify" />
-    <option name="LAST_COMMIT_MESSAGE" value="Register and Verify" />
+    <MESSAGE value="Action callback" />
+    <option name="LAST_COMMIT_MESSAGE" value="Action callback" />
   </component>
 </project>
