@@ -1,7 +1,13 @@
 import {Box, Button, Center, HStack, Text} from '@chakra-ui/react';
 import {FaGithub, FaGoogle} from 'react-icons/fa';
+import {signIn} from 'next-auth/react'
 
 const SocialMedia = () => {
+
+    const google = () => {
+        signIn('google', {callbackUrl: `${process.env.NEXT_PUBLIC_CLIENT_DOMAIN}`})
+    }
+
     return (
         <>
             <Box
@@ -37,7 +43,7 @@ const SocialMedia = () => {
                     </Center>
                 </Button>
 
-                <Button w={'full'} colorScheme={'red'} variant={'outline'} leftIcon={<FaGoogle/>}>
+                <Button onClick={google} w={'full'} colorScheme={'red'} variant={'outline'} leftIcon={<FaGoogle/>}>
                     <Center>
                         <Text>Sign in with Google</Text>
                     </Center>
