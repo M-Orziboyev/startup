@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Forgot password">
-      <change afterPath="$PROJECT_DIR$/client/src/pages/api/auth/[...nextauth].ts" afterDir="false" />
+    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Next-auth Google">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/social-media/social-media.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/social-media/social-media.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/api/hello.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/api/auth/[...nextauth].ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/api/auth/[...nextauth].ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nestjs" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/auth/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/src/auth/dto/login.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/auth/dto/login.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/src/user/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/user/user.model.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +26,7 @@
         <option name="title" value="All" />
       </GitPushTagMode>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/nestjs" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -60,7 +61,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Muzaffar\\Dasturlash\\startup\\server\\node_modules\\prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Muzaffar\\Dasturlash\\startup\\nestjs\\node_modules\\typescript\\lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Muzaffar\\Dasturlash\\startup\\client\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -136,7 +137,13 @@
       <workItem from="1691900045160" duration="4620000" />
       <workItem from="1691939530845" duration="2463000" />
       <workItem from="1692011060370" duration="4161000" />
-      <workItem from="1692027905968" duration="4597000" />
+      <workItem from="1692027905968" duration="5935000" />
+      <workItem from="1692083330673" duration="1382000" />
+      <workItem from="1692096700000" duration="2465000" />
+      <workItem from="1692104882654" duration="3305000" />
+      <workItem from="1692151633204" duration="2075000" />
+      <workItem from="1692158271073" duration="594000" />
+      <workItem from="1692185981807" duration="906000" />
     </task>
     <task id="LOCAL-00001" summary="Connect MongoDB">
       <created>1689053304326</created>
@@ -348,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692016092777</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Next-auth Google">
+      <created>1692072920923</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1692072920923</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +407,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="validation" />
     <MESSAGE value="JWT tokens (refresh and access)" />
     <MESSAGE value="add Readme.md" />
     <MESSAGE value="Complex Validation" />
@@ -418,6 +431,7 @@
     <MESSAGE value="Register and Verify" />
     <MESSAGE value="Action callback" />
     <MESSAGE value="Forgot password" />
-    <option name="LAST_COMMIT_MESSAGE" value="Forgot password" />
+    <MESSAGE value="Next-auth Google" />
+    <option name="LAST_COMMIT_MESSAGE" value="Next-auth Google" />
   </component>
 </project>

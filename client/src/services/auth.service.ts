@@ -53,6 +53,8 @@ export const AuthService = {
         return response
     },
 
+
+
     logout() {
         removeTokensCookie()
         localStorage.removeItem('user')
@@ -67,5 +69,12 @@ export const AuthService = {
         }
 
         return response
-    }
+    },
+    async checkUser(email: string) {
+        const response = await axios.post<'user' | 'no-user'>(`${API_URL}${getAuthUrl('check-user')}`, {
+            email,
+        });
+
+        return response.data;
+    },
 }
