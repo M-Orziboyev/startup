@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Next-auth Google">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/api/auth/[...nextauth].ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/api/auth/[...nextauth].ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs/src/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/auth/auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs/src/auth/dto/login.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/auth/dto/login.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nestjs/src/user/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/user/user.model.ts" afterDir="false" />
-    </list>
+    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Next-auth Google" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,7 +134,7 @@
       <workItem from="1692104882654" duration="3305000" />
       <workItem from="1692151633204" duration="2075000" />
       <workItem from="1692158271073" duration="594000" />
-      <workItem from="1692185981807" duration="906000" />
+      <workItem from="1692185981807" duration="1266000" />
     </task>
     <task id="LOCAL-00001" summary="Connect MongoDB">
       <created>1689053304326</created>
@@ -362,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692072920923</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Next-auth Google">
+      <created>1692188148100</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1692188148100</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
