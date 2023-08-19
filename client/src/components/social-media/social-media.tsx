@@ -7,6 +7,9 @@ const SocialMedia = () => {
     const google = () => {
         signIn('google', {callbackUrl: `${process.env.NEXT_PUBLIC_CLIENT_DOMAIN}`})
     }
+    const github = () => {
+        signIn('github', {callbackUrl: `${process.env.NEXT_PUBLIC_CLIENT_DOMAIN}`})
+    }
 
     return (
         <>
@@ -37,15 +40,15 @@ const SocialMedia = () => {
                 OR
             </Box>
             <HStack>
-                <Button w={'full'} colorScheme={'gray'} leftIcon={<FaGithub/>}>
+                <Button onClick={github} w={'full'} colorScheme={'gray'} leftIcon={<FaGithub/>}>
                     <Center>
-                        <Text>Continue with Github</Text>
+                        <Text>Github</Text>
                     </Center>
                 </Button>
 
                 <Button onClick={google} w={'full'} colorScheme={'red'} variant={'outline'} leftIcon={<FaGoogle/>}>
                     <Center>
-                        <Text>Sign in with Google</Text>
+                        <Text>Google</Text>
                     </Center>
                 </Button>
             </HStack>

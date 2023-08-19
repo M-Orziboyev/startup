@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Next-auth Google" />
+    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Next-auth Google(fk)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/social-media/social-media.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/social-media/social-media.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/helpers/auth.helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/helpers/auth.helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/api/auth/[...nextauth].ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/api/auth/[...nextauth].ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,7 +22,7 @@
         <option name="title" value="All" />
       </GitPushTagMode>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/nestjs" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -135,6 +140,10 @@
       <workItem from="1692151633204" duration="2075000" />
       <workItem from="1692158271073" duration="594000" />
       <workItem from="1692185981807" duration="1266000" />
+      <workItem from="1692295602316" duration="308000" />
+      <workItem from="1692337363858" duration="393000" />
+      <workItem from="1692350569149" duration="3033000" />
+      <workItem from="1692354167495" duration="596000" />
     </task>
     <task id="LOCAL-00001" summary="Connect MongoDB">
       <created>1689053304326</created>
@@ -360,7 +369,21 @@
       <option name="project" value="LOCAL" />
       <updated>1692188148100</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Next-auth Google(fk)">
+      <created>1692295753693</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1692295753693</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Next-auth Google(fk)">
+      <created>1692295870179</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1692295870179</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +428,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="JWT tokens (refresh and access)" />
     <MESSAGE value="add Readme.md" />
     <MESSAGE value="Complex Validation" />
     <MESSAGE value="Get user token" />
@@ -430,6 +452,7 @@
     <MESSAGE value="Action callback" />
     <MESSAGE value="Forgot password" />
     <MESSAGE value="Next-auth Google" />
-    <option name="LAST_COMMIT_MESSAGE" value="Next-auth Google" />
+    <MESSAGE value="Next-auth Google(fk)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Next-auth Google(fk)" />
   </component>
 </project>

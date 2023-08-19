@@ -2,6 +2,7 @@ import {NextApiRequest, NextApiResponse} from "next";
 import nextAuth from "next-auth";
 import * as process from "process";
 import GoogleProvider from 'next-auth/providers/google';
+import GithubProvider from 'next-auth/providers/github';
 import {AuthService} from "../../../services/auth.service";
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
@@ -10,6 +11,10 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
             GoogleProvider({
                 clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID as string,
                 clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET as string
+            }),
+            GithubProvider({
+                clientId: process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID as string,
+                clientSecret: process.env.NEXT_PUBLIC_GITHUB_CLIENT_SECRET as string
             })
         ],
         secret: process.env.NEXT_PUBLIC_SECRET_AUTH,
