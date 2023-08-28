@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Next-auth Google(fk)">
+    <list default="true" id="a909a4b1-be80-47bb-bbf7-6ea8eb48b7ab" name="Changes" comment="Next-auth GitHub">
+      <change afterPath="$PROJECT_DIR$/client/src/utils/cookie-persistance.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/social-media/social-media.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/social-media/social-media.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/helpers/auth.helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/helpers/auth.helper.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/api/auth/[...nextauth].ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/api/auth/[...nextauth].ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nestjs/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/nestjs/src/auth/auth.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +27,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/client/src/utils/cookie-persistance.ts" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -144,6 +150,8 @@
       <workItem from="1692337363858" duration="393000" />
       <workItem from="1692350569149" duration="3033000" />
       <workItem from="1692354167495" duration="596000" />
+      <workItem from="1692447294461" duration="7413000" />
+      <workItem from="1692595284274" duration="8221000" />
     </task>
     <task id="LOCAL-00001" summary="Connect MongoDB">
       <created>1689053304326</created>
@@ -383,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692295870179</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Next-auth GitHub">
+      <created>1692464741892</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1692464741892</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +443,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add Readme.md" />
     <MESSAGE value="Complex Validation" />
     <MESSAGE value="Get user token" />
     <MESSAGE value="User controllers" />
@@ -453,6 +467,7 @@
     <MESSAGE value="Forgot password" />
     <MESSAGE value="Next-auth Google" />
     <MESSAGE value="Next-auth Google(fk)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Next-auth Google(fk)" />
+    <MESSAGE value="Next-auth GitHub" />
+    <option name="LAST_COMMIT_MESSAGE" value="Next-auth GitHub" />
   </component>
 </project>

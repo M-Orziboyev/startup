@@ -4,6 +4,10 @@ import * as process from "process";
 import GoogleProvider from 'next-auth/providers/google';
 import GithubProvider from 'next-auth/providers/github';
 import {AuthService} from "../../../services/auth.service";
+import axios from "axios";
+import {AuthUserResponse} from "../../../store/user/user.interface";
+import {API_URL, getAuthUrl} from "../../../config/api.config";
+import {setCookie} from "src/utils/cookie-persistance";
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
     return nextAuth(req, res, {
@@ -20,15 +24,38 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
         secret: process.env.NEXT_PUBLIC_SECRET_AUTH,
         callbacks: {
             async signIn({user}) {
-                if(user){
+                if (user) {
                     const email = user.email as string;
                     const checkUser = await AuthService.checkUser(email)
                     if (checkUser === 'user') {
-                        await AuthService.login(email, '')
-                    }else if(checkUser === 'no-user'){
-                        await  AuthService.register(email, '')
+                        const response = await axios.post<AuthUserResponse>(
+                            `${API_URL}${getAuthUrl('login')}`,
+                            {
+                                email,
+                                password: ''
+                            }
+                        );
+                        setCookie(res, 'next-auth.access-token', response.data.accessToken, {
+                            path: '/',
+                            secure: true,
+                            maxAge: 2592000
+                        })
+                        return true
+                    } else if (checkUser === 'no-user') {
+                        const response = await axios.post<AuthUserResponse>(
+                            `${API_URL}${getAuthUrl('register')}`,
+                            {
+                                email,
+                                password: ''
+                            }
+                        );
+                        setCookie(res, 'next-auth.access-token', response.data.accessToken, {
+                            path: '/',
+                            secure: true,
+                            maxAge: 2592000
+                        })
+                        return true
                     }
-                    return true
                 }
                 return false
             }
