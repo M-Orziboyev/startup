@@ -21,6 +21,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
                 clientSecret: process.env.NEXT_PUBLIC_GITHUB_CLIENT_SECRET as string
             })
         ],
+
         secret: process.env.NEXT_PUBLIC_SECRET_AUTH,
         callbacks: {
             async signIn({user}) {
