@@ -34,7 +34,7 @@ export const AuthService = {
             saveStorage(response.data);
         }
 
-        return response
+        return response;
     },
 
     async sendOtp(email: string, isUser: boolean) {
@@ -45,27 +45,27 @@ export const AuthService = {
     async verifyOtp(email: string, otpVerification: string) {
         const response = await axios.post<'Success'>(`${API_URL}${getMailUrl('verify-otp')}`, {email, otpVerification})
 
-        return response
+        return response;
     },
     async editProfilePassword(email: string, password: string) {
         const response = await axios.put<'Success'>(`${API_URL}${getUserUrl('edit-password')}`, {email, password})
 
-        return response
+        return response;
     },
 
 
 
     logout() {
-        removeTokensCookie()
-        localStorage.removeItem('user')
+        removeTokensCookie();
+        localStorage.removeItem('user');
     },
 
     async getNewToken() {
         const refreshToken = Cookies.get('refreshToken')
-        const response = await axios.post(`${API_URL}${getAuthUrl('access')}`, {refreshToken})
+        const response = await axios.post(`${API_URL}${getAuthUrl('access')}`, { refreshToken });
 
         if (response.data.access) {
-            saveStorage(response.data)
+            saveStorage(response.data);
         }
 
         return response
