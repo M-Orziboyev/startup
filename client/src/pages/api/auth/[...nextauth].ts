@@ -32,6 +32,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
                         const response = await axios.post<AuthUserResponse>(
                             `${API_URL}${getAuthUrl('login')}`,
                             {
+
                                 email,
                                 password: ''
                             }
