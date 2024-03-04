@@ -9,7 +9,17 @@ import {AuthUserResponse} from "../../../store/user/user.interface";
 import {API_URL, getAuthUrl} from "../../../config/api.config";
 import {setCookie} from "src/utils/cookie-persistance";
 
+
+
 export default (req: NextApiRequest, res: NextApiResponse) => {
+    adapter: TypeORMLegacyAdapter({
+        type: 'mysql',
+        username: process.env.server,
+        password: process.env.aZJTA7W3Meu4oJTk,
+        host: process.env.DATABASE_HOST,
+        database: process.env.DATABASE_DB,
+        synchronize: false
+    })
     return nextAuth(req, res, {
         providers: [
             GoogleProvider({
@@ -32,9 +42,8 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
                         const response = await axios.post<AuthUserResponse>(
                             `${API_URL}${getAuthUrl('login')}`,
                             {
-
                                 email,
-                                password: ''
+                                password: '',
                             }
                         );
                         setCookie(res, 'next-auth.access-token', response.data.accessToken, {
@@ -48,7 +57,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
                             `${API_URL}${getAuthUrl('register')}`,
                             {
                                 email,
-                                password: ''
+                                password: '',
                             }
                         );
                         setCookie(res, 'next-auth.access-token', response.data.accessToken, {
@@ -63,4 +72,8 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
             }
         }
     })
+}
+
+function TypeORMLegacyAdapter(arg0: { type: string; username: string | undefined; password: string | undefined; host: string | undefined; database: string | undefined; synchronize: boolean; }) {
+    throw new Error("Function not implemented.");
 }
